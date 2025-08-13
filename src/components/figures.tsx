@@ -24,14 +24,14 @@ const figures = [
 
 export default function Figures() {
   return (
-    <section id="figures" className="bg-transparent">
+    <section id="figures" className="bg-background">
       <div className="container">
         <h2 className="text-5xl font-bold text-center mb-12">Personajes Ilustres</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {figures.map((figure) => (
-            <Card key={figure.name} className="flex flex-col text-center items-center p-6 bg-card/80 backdrop-blur-sm border-white/20 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 rounded-2xl">
+            <Card key={figure.name} className="flex flex-col text-center items-center p-6 bg-card border shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 rounded-2xl">
               <CardHeader className="p-0">
-                <div className="w-32 h-32 rounded-full overflow-hidden mx-auto border-4 border-accent">
+                <div className="w-32 h-32 rounded-full overflow-hidden mx-auto border-4 border-primary">
                   <Image
                     src="https://placehold.co/128x128.png"
                     alt={`Retrato de ${figure.name}`}
@@ -41,11 +41,11 @@ export default function Figures() {
                     data-ai-hint={figure.hint}
                   />
                 </div>
-                <CardTitle className="mt-4 text-2xl text-primary-foreground">{figure.name}</CardTitle>
-                <CardDescription className="text-accent font-semibold">{figure.title}</CardDescription>
+                <CardTitle className="mt-4 text-2xl text-foreground">{figure.name}</CardTitle>
+                <CardDescription className="text-primary font-semibold">{figure.title}</CardDescription>
               </CardHeader>
               <CardContent className="mt-4 p-0">
-                <p className="text-card-foreground/80">{figure.bio}</p>
+                <p className="text-muted-foreground">{figure.bio}</p>
               </CardContent>
             </Card>
           ))}

@@ -21,12 +21,12 @@ const dishes = [
 
 export default function Cuisine() {
   return (
-    <section id="cuisine" className="bg-transparent">
+    <section id="cuisine" className="bg-secondary/50">
       <div className="container">
         <h2 className="text-5xl font-bold text-center mb-12">Sabores que Enamoran</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {dishes.map((dish) => (
-            <Card key={dish.name} className="bg-card/80 backdrop-blur-sm border-white/20 overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 rounded-2xl group">
+            <Card key={dish.name} className="bg-card border overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 rounded-2xl group">
               <div className="overflow-hidden">
                 <Image
                   src="https://placehold.co/400x300.png"
@@ -38,10 +38,10 @@ export default function Cuisine() {
                 />
               </div>
               <CardHeader>
-                <CardTitle className="text-2xl text-primary-foreground">{dish.name}</CardTitle>
+                <CardTitle className="text-2xl text-primary">{dish.name}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-card-foreground/80">{dish.description}</p>
+                <p className="text-muted-foreground">{dish.description}</p>
               </CardContent>
             </Card>
           ))}

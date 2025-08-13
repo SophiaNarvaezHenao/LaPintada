@@ -32,20 +32,19 @@ export default function Hero() {
                 <Image
                   src={image.src}
                   alt={image.alt}
-                  layout="fill"
-                  objectFit="cover"
+                  fill
+                  style={{objectFit: 'cover'}}
                   className="brightness-50"
                   data-ai-hint={image.hint}
+                  priority={index === 0}
                 />
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-white bg-black/30 hover:bg-black/50 border-white/50" />
-          <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 z-10 text-white bg-black/30 hover:bg-black/50 border-white/50" />
         </Carousel>
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-0"></div>
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-10 p-4 container">
-        <h1 className="font-headline text-5xl md:text-7xl font-bold tracking-tight text-shadow-lg">
+        <h1 className="font-headline text-5xl md:text-7xl font-bold tracking-tight text-shadow-lg text-white">
           Bienvenidos a La Pintada
         </h1>
         <p className="mt-4 max-w-2xl text-lg md:text-xl text-white/90 drop-shadow-md">
@@ -53,7 +52,7 @@ export default function Hero() {
         </p>
         <div className="mt-8">
           <a href="#about">
-            <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-lg transition-transform duration-300 hover:scale-105">
+            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg transition-transform duration-300 hover:scale-105">
               Descubre la Magia
               <ArrowDown className="ml-2 h-5 w-5"/>
             </Button>

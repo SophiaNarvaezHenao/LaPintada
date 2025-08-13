@@ -66,16 +66,16 @@ export default function FolkTaleGenerator() {
   }
 
   return (
-    <section id="folktale" className="bg-transparent">
+    <section id="folktale" className="bg-secondary/50">
       <div className="container grid lg:grid-cols-2 gap-12 items-start">
         <div className="space-y-6">
           <div className="text-center lg:text-left">
             <h2 className="text-5xl font-bold">Crea tu Propio Cuento</h2>
-            <p className="mt-2 text-lg">
+            <p className="mt-2 text-lg text-muted-foreground">
               Elige los ingredientes y deja que la IA teja una historia única inspirada en La Pintada.
             </p>
           </div>
-          <Card className="shadow-xl rounded-2xl bg-card/80 backdrop-blur-sm border-white/20">
+          <Card className="shadow-xl rounded-2xl bg-card border">
             <CardContent className="p-6">
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -84,10 +84,10 @@ export default function FolkTaleGenerator() {
                     name="tone"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-primary-foreground/80">Tono del Cuento</FormLabel>
+                        <FormLabel>Tono del Cuento</FormLabel>
                         <Select onValueChange={field.onChange} defaultValue={field.value}>
                           <FormControl>
-                            <SelectTrigger className="bg-secondary border-white/20 text-secondary-foreground">
+                            <SelectTrigger>
                               <SelectValue placeholder="Selecciona un tono" />
                             </SelectTrigger>
                           </FormControl>
@@ -107,9 +107,9 @@ export default function FolkTaleGenerator() {
                     name="mainCharacter"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-primary-foreground/80">Personaje Principal</FormLabel>
+                        <FormLabel>Personaje Principal</FormLabel>
                         <FormControl>
-                          <Input placeholder="Ej: Una sabia abuela" {...field} className="bg-secondary border-white/20 text-secondary-foreground" />
+                          <Input placeholder="Ej: Una sabia abuela" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -120,15 +120,15 @@ export default function FolkTaleGenerator() {
                     name="moral"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-primary-foreground/80">Moraleja</FormLabel>
+                        <FormLabel>Moraleja</FormLabel>
                         <FormControl>
-                          <Input placeholder="Ej: El valor de la honestidad" {...field} className="bg-secondary border-white/20 text-secondary-foreground" />
+                          <Input placeholder="Ej: El valor de la honestidad" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
                     )}
                   />
-                  <Button type="submit" disabled={isLoading} size="lg" className="w-full bg-accent text-accent-foreground hover:bg-accent/90 transition-transform duration-300 hover:scale-105">
+                  <Button type="submit" disabled={isLoading} size="lg" className="w-full bg-primary text-primary-foreground hover:bg-primary/90 transition-transform duration-300 hover:scale-105">
                     {isLoading ? (
                       <>
                         <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -149,16 +149,16 @@ export default function FolkTaleGenerator() {
         <div className="flex items-center justify-center min-h-[500px] lg:min-h-full">
           {isLoading ? (
             <div className="text-center">
-              <Loader2 className="mx-auto h-16 w-16 animate-spin" />
-              <p className="mt-4 text-2xl">Tejiendo una nueva historia...</p>
-              <p>Esto puede tardar unos segundos.</p>
+              <Loader2 className="mx-auto h-16 w-16 animate-spin text-primary" />
+              <p className="mt-4 text-2xl font-semibold">Tejiendo una nueva historia...</p>
+              <p className="text-muted-foreground">Esto puede tardar unos segundos.</p>
             </div>
           ) : tale ? (
-            <Card className="w-full h-[550px] shadow-2xl animate-in fade-in-50 duration-500 rounded-2xl bg-card/80 backdrop-blur-sm border-white/20 overflow-hidden flex flex-col">
+            <Card className="w-full h-[550px] shadow-2xl animate-in fade-in-50 duration-500 rounded-2xl bg-card border overflow-hidden flex flex-col">
               <CardHeader>
-                <CardTitle className="text-3xl text-primary-foreground">{tale.title}</CardTitle>
+                <CardTitle className="text-3xl text-primary">{tale.title}</CardTitle>
               </CardHeader>
-              <CardContent className="prose prose-base max-w-none text-card-foreground/90 flex-grow">
+              <CardContent className="prose prose-base max-w-none text-foreground flex-grow">
                 <ScrollArea className="h-[400px] pr-4">
                   <p className="whitespace-pre-wrap">{tale.story}</p>
                 </ScrollArea>
@@ -167,8 +167,8 @@ export default function FolkTaleGenerator() {
           ) : (
              <div className="text-center p-8 border-2 border-dashed border-border rounded-2xl w-full h-full flex flex-col justify-center items-center bg-background/50">
                 <BookHeart className="mx-auto h-20 w-20 text-primary/80" />
-                <p className="mt-4 text-2xl">Tu cuento aparecerá aquí</p>
-                <p className="text-lg">Completa el formulario y dale vida a una leyenda.</p>
+                <p className="mt-4 text-2xl font-semibold">Tu cuento aparecerá aquí</p>
+                <p className="text-lg text-muted-foreground">Completa el formulario y dale vida a una leyenda.</p>
             </div>
           )}
         </div>

@@ -18,7 +18,7 @@ const photos = [
 
 export default function Gallery() {
   return (
-    <section id="gallery" className="bg-transparent">
+    <section id="gallery" className="bg-background">
       <div className="container">
         <h2 className="text-5xl font-bold text-center mb-12">Galería de Recuerdos</h2>
         <Carousel
@@ -32,7 +32,7 @@ export default function Gallery() {
             {photos.map((photo, index) => (
               <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
                 <div className="p-1">
-                  <Card className="overflow-hidden shadow-lg transition-transform hover:shadow-2xl hover:-translate-y-2 duration-300 rounded-2xl border-2 border-white/20">
+                  <Card className="overflow-hidden shadow-lg transition-transform hover:shadow-2xl hover:-translate-y-2 duration-300 rounded-2xl border bg-card">
                     <CardContent className="flex aspect-[4/3] items-center justify-center p-0">
                       <Image
                         src={photo.src}
@@ -48,8 +48,8 @@ export default function Gallery() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="text-foreground bg-background/50 hover:bg-background/80 -left-4 md:-left-12" />
-          <CarouselNext className="text-foreground bg-background/50 hover:bg-background/80 -right-4 md:-right-12" />
+          <CarouselPrevious className="text-foreground bg-background/50 hover:bg-background/80 border-border -left-4 md:-left-12" />
+          <CarouselNext className="text-foreground bg-background/50 hover:bg-background/80 border-border -right-4 md:-right-12" />
         </Carousel>
       </div>
     </section>

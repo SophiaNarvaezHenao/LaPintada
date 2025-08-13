@@ -3,14 +3,14 @@ import { Card } from '@/components/ui/card';
 
 export default function About() {
   return (
-    <section id="about" className="bg-transparent">
+    <section id="about" className="bg-background">
       <div className="container grid md:grid-cols-2 gap-12 items-center">
         <div className="space-y-6">
           <h2 className="text-5xl font-bold">Un Pueblo con Alma</h2>
-          <p className="text-lg">
+          <p className="text-lg text-muted-foreground">
             La Pintada, Antioquia, es un tesoro enclavado entre montañas, un lienzo vivo pintado por el río Cauca. Conocido por su clima cálido y su gente amable, este municipio es una parada obligatoria en la ruta hacia el Suroeste antioqueño.
           </p>
-          <p className="text-lg">
+          <p className="text-lg text-muted-foreground">
             Aquí, la tradición arriera se respira en el aire, y la arquitectura colonial de sus casas evoca la nostalgia de la casa de los abuelos. Es un lugar donde el tiempo parece pasar más despacio, invitando a disfrutar de la vida simple y la belleza natural.
           </p>
         </div>

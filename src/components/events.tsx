@@ -14,7 +14,7 @@ const events = [
       { text: 'Concursos tradicionales para toda la familia.', icon: Gift },
       { text: 'Apoyo a emprendimientos locales afectados por inundaciones.', icon: Handshake },
     ],
-    color: 'accent'
+    color: 'primary'
   },
   {
     name: 'Semana Santa en Vivo',
@@ -26,7 +26,7 @@ const events = [
       { text: 'Conciertos de música sacra en la iglesia del pueblo.', icon: Music },
       { text: 'Viacrucis al cerro de la cruz con participación de la comunidad.', icon: Cross },
     ],
-    color: 'primary'
+    color: 'blue'
   },
   {
     name: 'Festival de Sancochos',
@@ -38,7 +38,7 @@ const events = [
       { text: 'Venta de artesanías y productos locales.', icon: Gift },
       { text: 'Juegos tradicionales para niños y adultos.', icon: Users },
     ],
-    color: 'green'
+    color: 'accent'
   },
 ];
 
@@ -53,16 +53,16 @@ const colorVariants = {
     text: 'text-primary',
     border: 'border-primary',
   },
-  green: {
-    bg: 'bg-emerald-500/20',
-    text: 'text-emerald-500',
-    border: 'border-emerald-500',
+  blue: {
+    bg: 'bg-blue-500/20',
+    text: 'text-blue-500',
+    border: 'border-blue-500',
   }
 }
 
 export default function Events() {
   return (
-    <section id="events" className="bg-transparent">
+    <section id="events" className="bg-secondary/50">
       <div className="container">
         <h2 className="text-5xl font-bold text-center mb-12">Fiestas y Tradiciones</h2>
         <div className="grid lg:grid-cols-1 gap-8">
@@ -76,21 +76,21 @@ export default function Events() {
                     <Calendar className={`w-8 h-8 ${colors.text}`} />
                   </div>
                   <div className="flex-grow">
-                    <CardTitle className="text-2xl text-primary-foreground">{event.name}</CardTitle>
+                    <CardTitle className="text-2xl text-foreground">{event.name}</CardTitle>
                     <CardDescription className={`font-bold ${colors.text}`}>{event.date}</CardDescription>
                   </div>
                 </div>
               </CardHeader>
               <CardContent>
-                <p className="text-card-foreground/80 mb-6">{event.description}</p>
-                <h4 className="font-semibold text-primary-foreground mb-3">Actividades destacadas:</h4>
+                <p className="text-muted-foreground mb-6">{event.description}</p>
+                <h4 className="font-semibold text-foreground mb-3">Actividades destacadas:</h4>
                 <ul className="space-y-3">
                   {event.activities.map((activity, index) => (
                     <li key={index} className="flex items-start gap-3">
                       <div className={`w-6 h-6 flex items-center justify-center rounded-full ${colors.bg} flex-shrink-0`}>
                         <activity.icon className={`w-4 h-4 ${colors.text}`} />
                       </div>
-                      <span className="text-card-foreground/80">{activity.text}</span>
+                      <span className="text-muted-foreground">{activity.text}</span>
                     </li>
                   ))}
                 </ul>

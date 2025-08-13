@@ -12,10 +12,10 @@ const landmarks = [
 
 export default function InteractiveMap() {
   return (
-    <section id="map" className="bg-transparent">
+    <section id="map" className="bg-background">
       <div className="container">
         <h2 className="text-5xl font-bold text-center mb-8">Explora el Pueblo</h2>
-        <Card className="overflow-hidden relative shadow-2xl rounded-2xl border-4 border-white/20">
+        <Card className="overflow-hidden relative shadow-2xl rounded-2xl border bg-card">
           <Image
             src="https://placehold.co/1200x600.png"
             alt="Mapa de La Pintada"
