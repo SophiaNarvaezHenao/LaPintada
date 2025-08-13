@@ -1,21 +1,36 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Calendar } from 'lucide-react';
+import { Calendar, Star, Droplet, Users, Sparkles } from 'lucide-react';
 
 const events = [
   {
     name: 'Fiestas del Turismo y la Ganadería',
-    date: 'Junio',
-    description: 'La celebración más grande del municipio, con cabalgatas, conciertos, ferias y la calidez de nuestra gente.'
+    date: '19 al 22 de Junio',
+    description: 'La celebración más grande del municipio, una tradición que celebra la cultura, la identidad rural y el espíritu festivo. Se busca impulsar la recuperación económica tras las inundaciones, apoyando a las familias afectadas.',
+    activities: [
+      { text: 'Actos culturales, musicales y bienvenida a delegaciones.', icon: Star },
+      { text: 'Exposición ganadera y emocionantes rodeos.', icon: Calendar },
+      { text: 'Concursos tradicionales para toda la familia.', icon: Users },
+      { text: 'Eventos náuticos: kayak, avistamiento de aves y monos aulladores.', icon: Droplet },
+      { text: 'Conciertos con artistas invitados y cierre con fuegos artificiales.', icon: Sparkles },
+    ],
+    bgColor: 'bg-primary/10',
+    textColor: 'text-primary'
   },
   {
     name: 'Semana Santa en Vivo',
     date: 'Marzo/Abril',
-    description: 'Una tradición solemne y hermosa, con procesiones que recorren las calles del pueblo, representando la pasión de Cristo.'
+    description: 'Una tradición solemne y hermosa, con procesiones que recorren las calles del pueblo, representando la pasión de Cristo.',
+    activities: [],
+    bgColor: 'bg-accent/10',
+    textColor: 'text-accent'
   },
   {
     name: 'Festival de Sancochos',
     date: 'Octubre',
-    description: 'Las familias y amigos se reúnen a la orilla del río para competir por el sancocho más delicioso en un ambiente de fiesta.'
+    description: 'Las familias y amigos se reúnen a la orilla del río para competir por el sancocho más delicioso en un ambiente de fiesta.',
+    activities: [],
+    bgColor: 'bg-yellow-500/10',
+    textColor: 'text-yellow-600'
   },
 ];
 
@@ -24,18 +39,32 @@ export default function Events() {
     <section id="events" className="py-16 bg-secondary/30">
       <div className="container">
         <h2 className="font-headline text-3xl font-bold text-primary text-center mb-8">Fiestas y Tradiciones</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-1 gap-8">
           {events.map((event) => (
-            <Card key={event.name} className="text-center shadow-lg hover:shadow-xl transition-shadow rounded-lg">
+            <Card key={event.name} className={`shadow-lg hover:shadow-xl transition-shadow rounded-lg border-l-4 ${event.bgColor.replace('bg-', 'border-').replace('/10', '')}`}>
               <CardHeader>
-                <div className="mx-auto w-16 h-16 flex items-center justify-center rounded-full bg-primary/10 mb-4">
-                  <Calendar className="w-8 h-8 text-primary" />
+                <div className="flex items-start gap-4">
+                  <div className={`flex-shrink-0 w-16 h-16 flex items-center justify-center rounded-full ${event.bgColor}`}>
+                    <Calendar className={`w-8 h-8 ${event.textColor}`} />
+                  </div>
+                  <div className="flex-grow">
+                    <CardTitle className="font-headline">{event.name}</CardTitle>
+                    <CardDescription className={`font-bold ${event.textColor}`}>{event.date}</CardDescription>
+                  </div>
                 </div>
-                <CardTitle className="font-headline">{event.name}</CardTitle>
-                <CardDescription className="font-bold text-accent">{event.date}</CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-foreground/80">{event.description}</p>
+                <p className="text-foreground/80 mb-4">{event.description}</p>
+                {event.activities && event.activities.length > 0 && (
+                  <ul className="space-y-2">
+                    {event.activities.map((activity, index) => (
+                      <li key={index} className="flex items-start gap-3">
+                        <activity.icon className={`w-5 h-5 mt-1 flex-shrink-0 ${event.textColor}`} />
+                        <span className="text-foreground/70">{activity.text}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </CardContent>
             </Card>
           ))}
