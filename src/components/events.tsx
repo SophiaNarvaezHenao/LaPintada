@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Calendar, Star, Droplet, Users, Sparkles } from 'lucide-react';
+import { Calendar, Star, Droplet, Users, Sparkles, Church, Soup, Music, Gift } from 'lucide-react';
 
 const events = [
   {
@@ -8,8 +8,7 @@ const events = [
     description: 'La celebración más grande del municipio, una tradición que celebra la cultura, la identidad rural y el espíritu festivo. Se busca impulsar la recuperación económica tras las inundaciones, apoyando a las familias afectadas.',
     activities: [
       { text: 'Actos culturales, musicales y bienvenida a delegaciones.', icon: Star },
-      { text: 'Exposición ganadera y emocionantes rodeos.', icon: Calendar },
-      { text: 'Concursos tradicionales para toda la familia.', icon: Users },
+      { text: 'Exposición ganadera y emocionantes rodeos.', icon: Users },
       { text: 'Eventos náuticos: kayak, avistamiento de aves y monos aulladores.', icon: Droplet },
       { text: 'Conciertos con artistas invitados y cierre con fuegos artificiales.', icon: Sparkles },
     ],
@@ -19,16 +18,24 @@ const events = [
   {
     name: 'Semana Santa en Vivo',
     date: 'Marzo/Abril',
-    description: 'Una tradición solemne y hermosa, con procesiones que recorren las calles del pueblo, representando la pasión de Cristo.',
-    activities: [],
+    description: 'Una tradición solemne y hermosa, con procesiones que recorren las calles del pueblo. Los habitantes se convierten en actores para representar con devoción la Pasión de Cristo, creando una atmósfera de profundo respeto y comunidad.',
+    activities: [
+      { text: 'Procesiones solemnes por las calles principales.', icon: Church },
+      { text: 'Representaciones teatrales de la Pasión y Muerte de Jesús.', icon: Users },
+      { text: 'Conciertos de música sacra en la iglesia del pueblo.', icon: Music },
+    ],
     bgColor: 'bg-accent/10',
     textColor: 'text-accent'
   },
   {
     name: 'Festival de Sancochos',
     date: 'Octubre',
-    description: 'Las familias y amigos se reúnen a la orilla del río para competir por el sancocho más delicioso en un ambiente de fiesta.',
-    activities: [],
+    description: 'Las familias y amigos se reúnen a la orilla del río para competir por el sancocho más delicioso. Un día de integración comunitaria donde el aroma a leña y los sabores tradicionales son los protagonistas.',
+    activities: [
+      { text: 'Concurso al mejor sancocho con jurados expertos.', icon: Soup },
+      { text: 'Música en vivo y baile popular durante todo el día.', icon: Music },
+      { text: 'Venta de artesanías y productos locales.', icon: Gift },
+    ],
     bgColor: 'bg-yellow-500/10',
     textColor: 'text-yellow-600'
   },
