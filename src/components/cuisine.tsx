@@ -18,7 +18,7 @@ const dishes = [
     name: 'Arepa con Quesito',
     description: 'Simple y perfecta. Una arepa de maíz blanco o amarillo, asada y acompañada de un trozo de queso fresco antioqueño.',
     hint: 'arepa with cheese',
-    src: 'https://storage.googleapis.com/stablediffusion-12910.appspot.com/6a4773c3-6379-4592-8828-d8f95c1c8a14.jpeg',
+    src: 'https://images.unsplash.com/photo-1619683909167-9a9336b7d86c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxhcmVwYXxlbnwwfHx8fDE3NTUxMDI2MjB8MA&ixlib=rb-4.1.0&q=80&w=1080',
   },
 ];
 
