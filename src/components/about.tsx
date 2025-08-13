@@ -16,7 +16,7 @@ export default function About() {
         </div>
         <Card className="overflow-hidden shadow-2xl rounded-2xl transform hover:scale-105 transition-transform duration-300 border-4 border-white/20">
           <Image
-            src="https://placehold.co/600x400.png"
+            src="https://puebliandoporantioquia.com.co/wp-content/uploads/2025/03/PANORAMICA-LA-PINTADA-B-2-1.jpg"
             alt="Vista de La Pintada"
             width={600}
             height={400}
