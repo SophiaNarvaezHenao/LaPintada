@@ -17,7 +17,7 @@ export default function InteractiveMap() {
         <h2 className="text-5xl font-bold text-center mb-8">Explora el Pueblo</h2>
         <Card className="overflow-hidden relative shadow-2xl rounded-2xl border bg-card">
           <Image
-            src="https://www.google.com/maps/d/u/0/thumbnail?mid=1p2u87-qQZ827Fw5aAc5h_y92F-8&hl=en"
+            src="https://corregimientos.antioquia.gov.co/wp-content/uploads/2023/08/Mapas-La-Pintada-scaled.jpg"
             alt="Mapa de La Pintada"
             width={1200}
             height={800}
