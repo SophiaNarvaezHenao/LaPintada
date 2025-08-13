@@ -8,7 +8,6 @@ import FolkTaleGenerator from '@/components/folk-tale-generator';
 import Cuisine from '@/components/cuisine';
 import Events from '@/components/events';
 import Footer from '@/components/footer';
-import { Toaster } from '@/components/ui/toaster';
 
 export default function Home() {
   return (
@@ -17,15 +16,14 @@ export default function Home() {
       <main>
         <Hero />
         <About />
-        <InteractiveMap />
+        <Cuisine />
         <Gallery />
+        <InteractiveMap />
         <Figures />
         <FolkTaleGenerator />
-        <Cuisine />
         <Events />
       </main>
       <Footer />
-      <Toaster />
     </>
   );
 }

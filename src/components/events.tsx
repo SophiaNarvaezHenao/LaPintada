@@ -26,7 +26,7 @@ const events = [
       { text: 'Conciertos de música sacra en la iglesia del pueblo.', icon: Music },
       { text: 'Viacrucis al cerro de la cruz con participación de la comunidad.', icon: Cross },
     ],
-    color: 'blue'
+    color: 'primary'
   },
   {
     name: 'Festival de Sancochos',
@@ -44,53 +44,53 @@ const events = [
 
 const colorVariants = {
   accent: {
-    bg: 'bg-accent/10',
+    bg: 'bg-accent/20',
     text: 'text-accent',
     border: 'border-accent',
   },
-  blue: {
-    bg: 'bg-blue-500/10',
-    text: 'text-blue-600',
-    border: 'border-blue-500',
+  primary: {
+    bg: 'bg-primary/20',
+    text: 'text-primary',
+    border: 'border-primary',
   },
   green: {
-    bg: 'bg-emerald-500/10',
-    text: 'text-emerald-600',
+    bg: 'bg-emerald-500/20',
+    text: 'text-emerald-500',
     border: 'border-emerald-500',
   }
 }
 
 export default function Events() {
   return (
-    <section id="events" className="py-16 bg-background">
+    <section id="events" className="bg-transparent">
       <div className="container">
-        <h2 className="font-headline text-4xl font-bold text-primary text-center mb-12">Fiestas y Tradiciones</h2>
+        <h2 className="text-5xl font-bold text-center mb-12">Fiestas y Tradiciones</h2>
         <div className="grid lg:grid-cols-1 gap-8">
           {events.map((event) => {
             const colors = colorVariants[event.color as keyof typeof colorVariants];
             return (
-            <Card key={event.name} className={`shadow-lg hover:shadow-2xl transition-shadow rounded-xl border-l-4 ${colors.border}`}>
+            <Card key={event.name} className={`bg-card/80 backdrop-blur-sm border-white/20 shadow-lg hover:shadow-2xl transition-shadow rounded-2xl border-l-4 ${colors.border}`}>
               <CardHeader>
                 <div className="flex flex-col sm:flex-row items-start gap-4">
                   <div className={`flex-shrink-0 w-16 h-16 flex items-center justify-center rounded-lg ${colors.bg}`}>
                     <Calendar className={`w-8 h-8 ${colors.text}`} />
                   </div>
                   <div className="flex-grow">
-                    <CardTitle className="font-headline text-2xl">{event.name}</CardTitle>
+                    <CardTitle className="text-2xl text-primary-foreground">{event.name}</CardTitle>
                     <CardDescription className={`font-bold ${colors.text}`}>{event.date}</CardDescription>
                   </div>
                 </div>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground mb-6">{event.description}</p>
-                <h4 className="font-semibold text-primary mb-3">Actividades destacadas:</h4>
+                <p className="text-card-foreground/80 mb-6">{event.description}</p>
+                <h4 className="font-semibold text-primary-foreground mb-3">Actividades destacadas:</h4>
                 <ul className="space-y-3">
                   {event.activities.map((activity, index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <div className="w-6 h-6 flex items-center justify-center rounded-full bg-primary/10 flex-shrink-0">
-                        <activity.icon className={`w-4 h-4 text-primary`} />
+                      <div className={`w-6 h-6 flex items-center justify-center rounded-full ${colors.bg} flex-shrink-0`}>
+                        <activity.icon className={`w-4 h-4 ${colors.text}`} />
                       </div>
-                      <span className="text-muted-foreground">{activity.text}</span>
+                      <span className="text-card-foreground/80">{activity.text}</span>
                     </li>
                   ))}
                 </ul>

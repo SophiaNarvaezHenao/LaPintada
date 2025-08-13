@@ -12,10 +12,10 @@ const landmarks = [
 
 export default function InteractiveMap() {
   return (
-    <section id="map" className="py-16 bg-secondary">
+    <section id="map" className="bg-transparent">
       <div className="container">
-        <h2 className="font-headline text-4xl font-bold text-primary text-center mb-8">Explora el Pueblo</h2>
-        <Card className="overflow-hidden relative shadow-2xl rounded-xl border-4 border-white">
+        <h2 className="text-5xl font-bold text-center mb-8">Explora el Pueblo</h2>
+        <Card className="overflow-hidden relative shadow-2xl rounded-2xl border-4 border-white/20">
           <Image
             src="https://placehold.co/1200x600.png"
             alt="Mapa de La Pintada"
@@ -33,7 +33,7 @@ export default function InteractiveMap() {
                     style={{ top: landmark.top, left: landmark.left }}
                     aria-label={landmark.name}
                   >
-                    <MapPin className="w-10 h-10 text-accent drop-shadow-[0_3px_3px_rgba(0,0,0,0.4)] transition-transform hover:scale-125 hover:text-accent-foreground" />
+                    <MapPin className="w-10 h-10 text-accent drop-shadow-[0_3px_3px_rgba(0,0,0,0.4)] transition-transform hover:scale-125" />
                   </button>
                 </TooltipTrigger>
                 <TooltipContent className="bg-primary text-primary-foreground">

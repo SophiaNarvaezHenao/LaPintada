@@ -1,5 +1,18 @@
 import type {Metadata} from 'next';
 import './globals.css';
+import { Toaster } from '@/components/ui/toaster';
+import { cn } from '@/lib/utils';
+import { Inter, Playfair_Display } from 'next/font/google';
+
+const fontSans = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+})
+
+const fontSerif = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-serif",
+})
 
 export const metadata: Metadata = {
   title: 'Legado de La Pintada',
@@ -13,12 +26,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className="scroll-smooth">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
-      </head>
-      <body className="font-body antialiased">{children}</body>
+      <body className={cn(
+        "min-h-screen bg-background font-sans antialiased animated-bg",
+        fontSans.variable,
+        fontSerif.variable
+      )}>
+        {children}
+        <Toaster />
+      </body>
     </html>
   );
 }

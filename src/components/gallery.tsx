@@ -18,9 +18,9 @@ const photos = [
 
 export default function Gallery() {
   return (
-    <section id="gallery" className="py-16 bg-background">
+    <section id="gallery" className="bg-transparent">
       <div className="container">
-        <h2 className="font-headline text-4xl font-bold text-primary text-center mb-12">Galería de Recuerdos</h2>
+        <h2 className="text-5xl font-bold text-center mb-12">Galería de Recuerdos</h2>
         <Carousel
           opts={{
             align: 'start',
@@ -32,7 +32,7 @@ export default function Gallery() {
             {photos.map((photo, index) => (
               <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
                 <div className="p-1">
-                  <Card className="overflow-hidden shadow-lg transition-transform hover:shadow-2xl hover:-translate-y-2 duration-300 rounded-xl">
+                  <Card className="overflow-hidden shadow-lg transition-transform hover:shadow-2xl hover:-translate-y-2 duration-300 rounded-2xl border-2 border-white/20">
                     <CardContent className="flex aspect-[4/3] items-center justify-center p-0">
                       <Image
                         src={photo.src}
@@ -48,8 +48,8 @@ export default function Gallery() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="text-primary -left-4 md:-left-12" />
-          <CarouselNext className="text-primary -right-4 md:-right-12" />
+          <CarouselPrevious className="text-foreground bg-background/50 hover:bg-background/80 -left-4 md:-left-12" />
+          <CarouselNext className="text-foreground bg-background/50 hover:bg-background/80 -right-4 md:-right-12" />
         </Carousel>
       </div>
     </section>
