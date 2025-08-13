@@ -9,6 +9,8 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel';
 import { ArrowDown } from 'lucide-react';
+import Autoplay from "embla-carousel-autoplay";
+import React from 'react';
 
 const heroImages = [
   { src: 'https://images.unsplash.com/photo-1589629833710-00af2ddaf97a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjb2xvbWJpYW4lMjBsYW5kc2NhcGV8ZW58MHx8fHwxNzU1MTAyODQ5fDA&ixlib=rb-4.1.0&q=80&w=1080', alt: 'Paisaje de La Pintada', hint: 'colombian landscape' },
@@ -17,9 +19,14 @@ const heroImages = [
 ];
 
 export default function Hero() {
+  const plugin = React.useRef(
+    Autoplay({ delay: 3000, stopOnInteraction: true })
+  )
+
   return (
     <section className="relative h-[90vh] w-full text-white overflow-hidden">
        <Carousel
+          plugins={[plugin.current]}
           opts={{
             align: 'start',
             loop: true,
@@ -28,7 +35,7 @@ export default function Hero() {
         >
           <CarouselContent className="h-full">
             {heroImages.map((image, index) => (
-              <CarouselItem key={index} className="h-full">
+              <CarouselItem key={index} className="h-full relative">
                 <Image
                   src={image.src}
                   alt={image.alt}
@@ -41,6 +48,8 @@ export default function Hero() {
               </CarouselItem>
             ))}
           </CarouselContent>
+          <CarouselPrevious className="absolute left-4 text-white bg-black/30 hover:bg-black/50 border-none" />
+          <CarouselNext className="absolute right-4 text-white bg-black/30 hover:bg-black/50 border-none" />
         </Carousel>
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-0"></div>
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-10 p-4 container">
