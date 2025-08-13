@@ -18,7 +18,7 @@ const dishes = [
     name: 'Arepa con Quesito',
     description: 'Simple y perfecta. Una arepa de maíz blanco o amarillo, asada y acompañada de un trozo de queso fresco antioqueño.',
     hint: 'arepa with cheese',
-    src: 'https://images.unsplash.com/photo-1619683909167-9a9336b7d86c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxhcmVwYXxlbnwwfHx8fDE3NTUxMDI2MjB8MA&ixlib=rb-4.1.0&q=80&w=1080',
+    src: 'https://www.laylita.com/recetas/wp-content/uploads/2022/08/Arepas-colombianas-de-queso.jpg',
   },
 ];
 
