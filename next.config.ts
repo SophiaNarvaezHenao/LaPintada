@@ -33,6 +33,12 @@ const nextConfig: NextConfig = {
         hostname: 'www.laylita.com',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'i.ytimg.com',
+        port: '',
+        pathname: '/**',
       }
     ],
   },

@@ -12,7 +12,7 @@ const dishes = [
     name: 'Sancocho Antioqueño',
     description: 'Una sopa robusta y reconfortante, hecha con varias carnes, papa, yuca, plátano y mazorca. El sabor de un domingo en familia.',
     hint: 'sancocho soup',
-    src: 'https://images.unsplash.com/photo-1611068120879-531d290f60d6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzYW5jb2NobyUyMHNvdXB8ZW58MHx8fHwxNzU1MTAyMzAyfDA&ixlib=rb-4.1.0&q=80&w=1080',
+    src: 'https://i.ytimg.com/vi/DPr7wRpkpLc/maxresdefault.jpg',
   },
   {
     name: 'Arepa con Quesito',
