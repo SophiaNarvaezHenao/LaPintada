@@ -4,10 +4,10 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 import Image from 'next/image';
 
 const landmarks = [
-  { name: 'Puente Viejo', top: '50%', left: '30%' },
-  { name: 'Parque Principal', top: '40%', left: '55%' },
-  { name: 'Iglesia San Antonio', top: '35%', left: '65%' },
-  { name: 'Mirador del Cauca', top: '70%', left: '75%' },
+  { name: 'Puente Viejo', top: '75%', left: '48%' },
+  { name: 'Parque Principal', top: '50%', left: '52%' },
+  { name: 'Iglesia San Antonio', top: '45%', left: '60%' },
+  { name: 'Mirador del Cauca', top: '15%', left: '25%' },
 ];
 
 export default function InteractiveMap() {
@@ -17,10 +17,10 @@ export default function InteractiveMap() {
         <h2 className="text-5xl font-bold text-center mb-8">Explora el Pueblo</h2>
         <Card className="overflow-hidden relative shadow-2xl rounded-2xl border bg-card">
           <Image
-            src="https://placehold.co/1200x600.png"
+            src="https://images.unsplash.com/photo-1528968694828-a6d175b5305c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx2aW50YWdlJTIwbWFwJTIwY29sb21iaWF8ZW58MHx8fHwxNzU1MjcwMjM2fDA&ixlib=rb-4.1.0&q=80&w=1080"
             alt="Mapa de La Pintada"
             width={1200}
-            height={600}
+            height={800}
             className="w-full h-auto object-cover"
             data-ai-hint="vintage map colombia"
           />
