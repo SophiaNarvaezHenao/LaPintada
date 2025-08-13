@@ -51,7 +51,7 @@ export default function Hero() {
           <CarouselPrevious className="absolute left-4 text-white bg-black/30 hover:bg-black/50 border-none" />
           <CarouselNext className="absolute right-4 text-white bg-black/30 hover:bg-black/50 border-none" />
         </Carousel>
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-0"></div>
+      
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-10 p-4 container">
         <h1 className="font-headline text-5xl md:text-7xl font-bold tracking-tight text-shadow-lg text-white">
           Bienvenidos a La Pintada
