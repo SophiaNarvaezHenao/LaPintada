@@ -39,7 +39,19 @@ const nextConfig: NextConfig = {
         hostname: 'i.ytimg.com',
         port: '',
         pathname: '/**',
-      }
+      },
+      {
+        protocol: 'https',
+        hostname: 'puebliandoporantioquia.com.co',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'upload.wikimedia.org',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 };

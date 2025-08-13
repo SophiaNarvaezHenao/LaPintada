@@ -13,9 +13,9 @@ import Autoplay from "embla-carousel-autoplay";
 import React from 'react';
 
 const heroImages = [
-  { src: 'https://images.unsplash.com/photo-1589629833710-00af2ddaf97a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjb2xvbWJpYW4lMjBsYW5kc2NhcGV8ZW58MHx8fHwxNzU1MTAyODQ5fDA&ixlib=rb-4.1.0&q=80&w=1080', alt: 'Paisaje de La Pintada', hint: 'colombian landscape' },
-  { src: 'https://images.unsplash.com/photo-1650201777831-8c5c23a2b41e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyaXZlciUyMHZpZXclMjBjb2xvbWJpYXxlbnwwfHx8fDE3NTUxMDI4NDl8MA&ixlib=rb-4.1.0&q=80&w=1080', alt: 'Río Cauca en La Pintada', hint: 'river view colombia' },
-  { src: 'https://images.unsplash.com/photo-1652019815309-95821b00084c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjb2ZmZWUlMjBwbGFudGF0aW9ufGVufDB8fHx8MTc1NTEwMjg0OXww&ixlib=rb-4.1.0&q=80&w=1080', alt: 'Cultura cafetera', hint: 'coffee plantation' },
+  { src: 'https://puebliandoporantioquia.com.co/wp-content/uploads/2025/03/PANORAMICA-LA-PINTADA-B-2-1.jpg', alt: 'Paisaje de La Pintada', hint: 'colombian landscape' },
+  { src: 'https://storage.googleapis.com/static.proantioquia.org/MARCA-REGI%C3%93N-CONTENIDOS/LA-PINTADA/la-pintada-cauca.jpg', alt: 'Río Cauca en La Pintada', hint: 'river view colombia' },
+  { src: 'https://upload.wikimedia.org/wikipedia/commons/e/e9/Puente_de_La_Pintada.JPG', alt: 'Puente de La Pintada', hint: 'colombian bridge' },
 ];
 
 export default function Hero() {
