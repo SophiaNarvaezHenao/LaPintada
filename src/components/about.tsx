@@ -3,18 +3,18 @@ import { Card } from '@/components/ui/card';
 
 export default function About() {
   return (
-    <section id="about" className="py-16 bg-secondary/30">
+    <section id="about" className="py-16 bg-background">
       <div className="container grid md:grid-cols-2 gap-12 items-center">
-        <div>
-          <h2 className="font-headline text-3xl font-bold text-primary mb-4">Un Pueblo con Alma</h2>
-          <p className="text-foreground/80 mb-4">
+        <div className="space-y-4">
+          <h2 className="font-headline text-4xl font-bold text-primary">Un Pueblo con Alma</h2>
+          <p className="text-muted-foreground text-lg">
             La Pintada, Antioquia, es un tesoro enclavado entre montañas, un lienzo vivo pintado por el río Cauca. Conocido por su clima cálido y su gente amable, este municipio es una parada obligatoria en la ruta hacia el Suroeste antioqueño.
           </p>
-          <p className="text-foreground/80">
+          <p className="text-muted-foreground text-lg">
             Aquí, la tradición arriera se respira en el aire, y la arquitectura colonial de sus casas evoca la nostalgia de la casa de los abuelos. Es un lugar donde el tiempo parece pasar más despacio, invitando a disfrutar de la vida simple y la belleza natural.
           </p>
         </div>
-        <Card className="overflow-hidden shadow-lg rounded-lg">
+        <Card className="overflow-hidden shadow-2xl rounded-xl transform hover:scale-105 transition-transform duration-300">
           <Image
             src="https://placehold.co/600x400.png"
             alt="Vista de La Pintada"

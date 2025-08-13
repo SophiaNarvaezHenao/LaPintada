@@ -18,21 +18,21 @@ const photos = [
 
 export default function Gallery() {
   return (
-    <section id="gallery" className="py-16 bg-secondary/30">
+    <section id="gallery" className="py-16 bg-background">
       <div className="container">
-        <h2 className="font-headline text-3xl font-bold text-primary text-center mb-8">Galería de Recuerdos</h2>
+        <h2 className="font-headline text-4xl font-bold text-primary text-center mb-12">Galería de Recuerdos</h2>
         <Carousel
           opts={{
             align: 'start',
             loop: true,
           }}
-          className="w-full max-w-5xl mx-auto"
+          className="w-full max-w-6xl mx-auto"
         >
-          <CarouselContent>
+          <CarouselContent className="-ml-4">
             {photos.map((photo, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+              <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
                 <div className="p-1">
-                  <Card className="overflow-hidden shadow-md transition-transform hover:scale-105 rounded-lg">
+                  <Card className="overflow-hidden shadow-lg transition-transform hover:shadow-2xl hover:-translate-y-2 duration-300 rounded-xl">
                     <CardContent className="flex aspect-[4/3] items-center justify-center p-0">
                       <Image
                         src={photo.src}
@@ -48,8 +48,8 @@ export default function Gallery() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="text-primary -left-4" />
-          <CarouselNext className="text-primary -right-4" />
+          <CarouselPrevious className="text-primary -left-4 md:-left-12" />
+          <CarouselNext className="text-primary -right-4 md:-right-12" />
         </Carousel>
       </div>
     </section>

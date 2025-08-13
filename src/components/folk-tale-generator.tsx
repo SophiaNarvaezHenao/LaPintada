@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
-import { Loader2, BookHeart } from 'lucide-react';
+import { Loader2, BookHeart, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   Form,
@@ -25,6 +25,7 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { generateFolkTale, type GenerateFolkTaleOutput } from '@/ai/flows/generate-folk-tale';
 import { useToast } from '@/hooks/use-toast';
+import { ScrollArea } from '@/components/ui/scroll-area';
 
 const FormSchema = z.object({
   tone: z.string().min(1, 'El tono es requerido.'),
@@ -56,8 +57,8 @@ export default function FolkTaleGenerator() {
       console.error('Error generating folk tale:', error);
       toast({
         variant: 'destructive',
-        title: 'Error',
-        description: 'No se pudo generar el cuento. Inténtalo de nuevo.',
+        title: 'Error al generar el cuento',
+        description: 'Hubo un problema con la IA. Por favor, inténtalo de nuevo más tarde.',
       });
     } finally {
       setIsLoading(false);
@@ -65,14 +66,16 @@ export default function FolkTaleGenerator() {
   }
 
   return (
-    <section id="folktale" className="py-16 bg-secondary/30">
+    <section id="folktale" className="py-16 bg-secondary">
       <div className="container grid lg:grid-cols-2 gap-12 items-start">
-        <div>
-          <h2 className="font-headline text-3xl font-bold text-primary mb-4">Cuentos de la Tierra</h2>
-          <p className="text-foreground/80 mb-6">
-            Crea tu propio cuento popular inspirado en La Pintada. Elige el tono, el protagonista y la moraleja, y deja que la magia de la inteligencia artificial teja una historia única para ti.
-          </p>
-          <Card className="shadow-lg rounded-lg">
+        <div className="space-y-6">
+          <div className="text-center lg:text-left">
+            <h2 className="font-headline text-4xl font-bold text-primary">Crea tu Propio Cuento</h2>
+            <p className="text-muted-foreground mt-2 text-lg">
+              Elige los ingredientes y deja que la IA teja una historia única inspirada en La Pintada.
+            </p>
+          </div>
+          <Card className="shadow-xl rounded-xl">
             <CardContent className="p-6">
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -125,15 +128,15 @@ export default function FolkTaleGenerator() {
                       </FormItem>
                     )}
                   />
-                  <Button type="submit" disabled={isLoading} className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
+                  <Button type="submit" disabled={isLoading} size="lg" className="w-full bg-accent text-accent-foreground hover:bg-accent/90 transition-transform duration-300 hover:scale-105">
                     {isLoading ? (
                       <>
                         <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                        Generando...
+                        Generando Magia...
                       </>
                     ) : (
                       <>
-                        <BookHeart className="mr-2 h-4 w-4" />
+                        <Sparkles className="mr-2 h-4 w-4" />
                         Crear mi Cuento
                       </>
                     )}
@@ -143,26 +146,29 @@ export default function FolkTaleGenerator() {
             </CardContent>
           </Card>
         </div>
-        <div className="flex items-center justify-center min-h-[400px] lg:min-h-full">
+        <div className="flex items-center justify-center min-h-[500px] lg:min-h-full">
           {isLoading ? (
-            <div className="text-center text-foreground/80">
-              <Loader2 className="mx-auto h-12 w-12 animate-spin text-primary" />
-              <p className="mt-4 font-headline">Tejiendo una nueva historia...</p>
+            <div className="text-center text-primary">
+              <Loader2 className="mx-auto h-16 w-16 animate-spin" />
+              <p className="mt-4 font-headline text-2xl">Tejiendo una nueva historia...</p>
+              <p className="text-muted-foreground">Esto puede tardar unos segundos.</p>
             </div>
           ) : tale ? (
-            <Card className="w-full h-full shadow-lg animate-in fade-in-50 duration-500 rounded-lg">
+            <Card className="w-full h-[550px] shadow-2xl animate-in fade-in-50 duration-500 rounded-xl bg-card overflow-hidden flex flex-col">
               <CardHeader>
-                <CardTitle className="font-headline text-primary">{tale.title}</CardTitle>
+                <CardTitle className="font-headline text-3xl text-primary">{tale.title}</CardTitle>
               </CardHeader>
-              <CardContent className="prose prose-sm max-w-none text-foreground/90">
-                <p className="whitespace-pre-wrap">{tale.story}</p>
+              <CardContent className="prose prose-base max-w-none text-foreground/90 flex-grow">
+                <ScrollArea className="h-[400px] pr-4">
+                  <p className="whitespace-pre-wrap">{tale.story}</p>
+                </ScrollArea>
               </CardContent>
             </Card>
           ) : (
-             <div className="text-center text-foreground/60 p-8 border-2 border-dashed border-border rounded-lg w-full h-full flex flex-col justify-center items-center">
-                <BookHeart className="mx-auto h-16 w-16" />
-                <p className="mt-4 font-headline text-lg">Tu cuento aparecerá aquí</p>
-                <p className="text-sm">Completa el formulario y dale vida a una leyenda.</p>
+             <div className="text-center text-muted-foreground p-8 border-2 border-dashed border-border rounded-xl w-full h-full flex flex-col justify-center items-center bg-background/50">
+                <BookHeart className="mx-auto h-20 w-20 text-primary/80" />
+                <p className="mt-4 font-headline text-2xl text-primary">Tu cuento aparecerá aquí</p>
+                <p className="text-lg">Completa el formulario y dale vida a una leyenda.</p>
             </div>
           )}
         </div>

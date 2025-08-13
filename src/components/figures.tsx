@@ -24,14 +24,14 @@ const figures = [
 
 export default function Figures() {
   return (
-    <section id="figures" className="py-16">
+    <section id="figures" className="py-16 bg-secondary">
       <div className="container">
-        <h2 className="font-headline text-3xl font-bold text-primary text-center mb-8">Personajes Ilustres</h2>
+        <h2 className="font-headline text-4xl font-bold text-primary text-center mb-12">Personajes Ilustres</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {figures.map((figure) => (
-            <Card key={figure.name} className="flex flex-col text-center items-center p-6 shadow-lg hover:shadow-xl transition-shadow rounded-lg">
+            <Card key={figure.name} className="flex flex-col text-center items-center p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 rounded-xl bg-card">
               <CardHeader className="p-0">
-                <div className="w-32 h-32 rounded-full overflow-hidden mx-auto border-4 border-secondary">
+                <div className="w-32 h-32 rounded-full overflow-hidden mx-auto border-4 border-accent">
                   <Image
                     src="https://placehold.co/128x128.png"
                     alt={`Retrato de ${figure.name}`}
@@ -41,11 +41,11 @@ export default function Figures() {
                     data-ai-hint={figure.hint}
                   />
                 </div>
-                <CardTitle className="mt-4 font-headline">{figure.name}</CardTitle>
-                <CardDescription className="text-primary font-semibold">{figure.title}</CardDescription>
+                <CardTitle className="mt-4 font-headline text-2xl">{figure.name}</CardTitle>
+                <CardDescription className="text-accent font-semibold">{figure.title}</CardDescription>
               </CardHeader>
               <CardContent className="mt-4 p-0">
-                <p className="text-foreground/80">{figure.bio}</p>
+                <p className="text-muted-foreground">{figure.bio}</p>
               </CardContent>
             </Card>
           ))}

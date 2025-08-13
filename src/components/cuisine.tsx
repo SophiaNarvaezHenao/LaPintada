@@ -21,25 +21,27 @@ const dishes = [
 
 export default function Cuisine() {
   return (
-    <section id="cuisine" className="py-16">
+    <section id="cuisine" className="py-16 bg-background">
       <div className="container">
-        <h2 className="font-headline text-3xl font-bold text-primary text-center mb-8">Sabores de Antaño</h2>
+        <h2 className="font-headline text-4xl font-bold text-primary text-center mb-12">Sabores que Enamoran</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {dishes.map((dish) => (
-            <Card key={dish.name} className="overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-2 rounded-lg">
-              <Image
-                src="https://placehold.co/400x300.png"
-                alt={dish.name}
-                width={400}
-                height={300}
-                className="w-full h-48 object-cover"
-                data-ai-hint={dish.hint}
-              />
+            <Card key={dish.name} className="overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 rounded-xl group">
+              <div className="overflow-hidden">
+                <Image
+                  src="https://placehold.co/400x300.png"
+                  alt={dish.name}
+                  width={400}
+                  height={300}
+                  className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110"
+                  data-ai-hint={dish.hint}
+                />
+              </div>
               <CardHeader>
-                <CardTitle className="font-headline">{dish.name}</CardTitle>
+                <CardTitle className="font-headline text-2xl">{dish.name}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-foreground/80">{dish.description}</p>
+                <p className="text-muted-foreground">{dish.description}</p>
               </CardContent>
             </Card>
           ))}
