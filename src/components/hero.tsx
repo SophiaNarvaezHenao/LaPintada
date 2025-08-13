@@ -13,9 +13,9 @@ import Autoplay from "embla-carousel-autoplay";
 import React from 'react';
 
 const heroImages = [
-  { src: 'https://puebliandoporantioquia.com.co/wp-content/uploads/2025/03/PANORAMICA-LA-PINTADA-B-2-1.jpg', alt: 'Paisaje de La Pintada', hint: 'colombian landscape' },
-  { src: 'https://storage.googleapis.com/static.proantioquia.org/MARCA-REGI%C3%93N-CONTENIDOS/LA-PINTADA/la-pintada-cauca.jpg', alt: 'Río Cauca en La Pintada', hint: 'river view colombia' },
-  { src: 'https://upload.wikimedia.org/wikipedia/commons/e/e9/Puente_de_La_Pintada.JPG', alt: 'Puente de La Pintada', hint: 'colombian bridge' },
+  { src: 'https://images.unsplash.com/photo-1611148261486-4e315d904232?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjb2xvbWJpYW4lMjBsYW5kc2NhcGV8ZW58MHx8fHwxNzU1MTAyODQ5fDA&ixlib=rb-4.1.0&q=80&w=1080', alt: 'Paisaje de La Pintada', hint: 'colombian landscape' },
+  { src: 'https://images.unsplash.com/photo-1579993718929-891f593130f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cml2ZXIlMjB2aWV3JTIwY29sb21iaWF8ZW58MHx8fHwxNzU1MTAyODQ5fDA&ixlib=rb-4.1.0&q=80&w=1080', alt: 'Río Cauca en La Pintada', hint: 'river view colombia' },
+  { src: 'https://images.unsplash.com/photo-1495766886415-5914d39f4a4f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjb2xvbWJpYW4lMjBicmlkZ2V8ZW58MHx8fHwxNzU1MTAzNDM2fDA&ixlib=rb-4.1.0&q=80&w=1080', alt: 'Puente de La Pintada', hint: 'colombian bridge' },
 ];
 
 export default function Hero() {
