@@ -21,7 +21,7 @@ const dishes = [
 
 export default function Cuisine() {
   return (
-    <section id="cuisine" className="bg-secondary/50">
+    <section id="cuisine" className="bg-blue-600/10 dark:bg-blue-900/20">
       <div className="container">
         <h2 className="text-5xl font-bold text-center mb-12">Sabores que Enamoran</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -29,7 +29,7 @@ export default function Cuisine() {
             <Card key={dish.name} className="bg-card border overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 rounded-2xl group">
               <div className="overflow-hidden">
                 <Image
-                  src="https://placehold.co/400x300.png"
+                  src={`https://placehold.co/400x300.png`}
                   alt={dish.name}
                   width={400}
                   height={300}
