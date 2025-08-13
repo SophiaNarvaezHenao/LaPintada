@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Calendar, Star, Droplet, Users, Sparkles, Church, Soup, Music, Gift } from 'lucide-react';
+import { Calendar, Star, Droplet, Users, Sparkles, Church, Soup, Music, Gift, Drama, Cross, Utensils } from 'lucide-react';
 
 const events = [
   {
@@ -21,11 +21,12 @@ const events = [
     description: 'Una tradición solemne y hermosa, con procesiones que recorren las calles del pueblo. Los habitantes se convierten en actores para representar con devoción la Pasión de Cristo, creando una atmósfera de profundo respeto y comunidad.',
     activities: [
       { text: 'Procesiones solemnes por las calles principales.', icon: Church },
-      { text: 'Representaciones teatrales de la Pasión y Muerte de Jesús.', icon: Users },
+      { text: 'Representaciones teatrales de la Pasión y Muerte de Jesús.', icon: Drama },
       { text: 'Conciertos de música sacra en la iglesia del pueblo.', icon: Music },
+      { text: 'Viacrucis al cerro de la cruz con participación de la comunidad.', icon: Cross },
     ],
-    bgColor: 'bg-accent/10',
-    textColor: 'text-accent'
+    bgColor: 'bg-indigo-500/10',
+    textColor: 'text-indigo-600'
   },
   {
     name: 'Festival de Sancochos',
@@ -35,9 +36,10 @@ const events = [
       { text: 'Concurso al mejor sancocho con jurados expertos.', icon: Soup },
       { text: 'Música en vivo y baile popular durante todo el día.', icon: Music },
       { text: 'Venta de artesanías y productos locales.', icon: Gift },
+      { text: 'Juegos tradicionales para niños y adultos.', icon: Utensils },
     ],
-    bgColor: 'bg-yellow-500/10',
-    textColor: 'text-yellow-600'
+    bgColor: 'bg-emerald-500/10',
+    textColor: 'text-emerald-600'
   },
 ];
 
