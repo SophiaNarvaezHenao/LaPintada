@@ -41,23 +41,25 @@ const folkTalePrompt = ai.definePrompt({
   name: 'folkTalePrompt',
   input: {schema: GenerateFolkTaleInputSchema},
   output: {schema: GenerateFolkTaleOutputSchema},
-  prompt: `You are a master storyteller specializing in folk tales from La Pintada, Colombia.
+  prompt: `Eres un maestro narrador especializado en cuentos populares de La Pintada, Colombia.
 
-  Craft a folk tale with the following characteristics:
-  - Tone: {{{tone}}}
-  - Main Character: {{{mainCharacter}}}
-  - Moral: {{{moral}}}
+  Elabora un cuento popular con las siguientes características:
+  - Tono: {{{tone}}}
+  - Personaje Principal: {{{mainCharacter}}}
+  - Moraleja: {{{moral}}}
 
-  The folk tale should be set in or related to La Pintada, incorporating elements of the local culture, traditions, and landscape.
+  El cuento debe estar ambientado o relacionado con La Pintada, incorporando elementos de la cultura, las tradiciones y el paisaje local.
 
-  Ensure the story is engaging, and thought-provoking, and reflects the values of the community.
+  Asegúrate de que la historia sea atractiva, que invite a la reflexión y que refleje los valores de la comunidad.
 
-  Return the output as JSON with a title and story field. Do not include any preamble in the response.
+  **El cuento y el título deben estar escritos en español.**
 
-  Here's an example output:
+  Devuelve el resultado en formato JSON con un campo "title" y un campo "story". No incluyas ningún preámbulo en la respuesta.
+
+  Aquí tienes un ejemplo de salida:
   {
-    "title": "The Legend of the Whispering River",
-    "story": "In the heart of La Pintada, where the mountains kiss the sky, lived a young boy named Mateo..."
+    "title": "La leyenda del río susurrante",
+    "story": "En el corazón de La Pintada, donde las montañas besan el cielo, vivía un joven llamado Mateo..."
   }`,
 });
 
