@@ -14,16 +14,19 @@ export default function About() {
             Aquí, la tradición arriera se respira en el aire, y la arquitectura colonial de sus casas evoca la nostalgia de la casa de los abuelos. Es un lugar donde el tiempo parece pasar más despacio, invitando a disfrutar de la vida simple y la belleza natural.
           </p>
         </div>
-        <Card className="overflow-hidden shadow-2xl rounded-2xl transform hover:scale-105 transition-transform duration-300 border-4 border-white/20">
-          <Image
-            src="https://puebliandoporantioquia.com.co/wp-content/uploads/2025/03/PANORAMICA-LA-PINTADA-B-2-1.jpg"
-            alt="Vista de La Pintada"
-            width={600}
-            height={400}
-            className="w-full h-auto object-cover"
-            data-ai-hint="colombian town landscape"
-          />
-        </Card>
+        <div className="group relative">
+          <Card className="overflow-hidden shadow-2xl rounded-2xl transform transition-transform duration-300 group-hover:scale-105">
+            <Image
+              src="https://puebliandoporantioquia.com.co/wp-content/uploads/2025/03/PANORAMICA-LA-PINTADA-B-2-1.jpg"
+              alt="Vista de La Pintada"
+              width={600}
+              height={400}
+              className="w-full h-auto object-cover"
+              data-ai-hint="colombian town landscape"
+            />
+          </Card>
+          <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-yellow-400 via-blue-500 to-red-600 opacity-0 transition-opacity duration-500 group-hover:opacity-75 blur-lg z-[-1]"></div>
+        </div>
       </div>
     </section>
   );
