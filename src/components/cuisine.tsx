@@ -21,7 +21,7 @@ const dishes = [
 
 export default function Cuisine() {
   return (
-    <section id="cuisine" className="bg-blue-600/10 dark:bg-blue-900/20">
+    <section id="cuisine" className="bg-secondary/50">
       <div className="container">
         <h2 className="text-5xl font-bold text-center mb-12">Sabores que Enamoran</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
