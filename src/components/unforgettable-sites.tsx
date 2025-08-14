@@ -9,12 +9,6 @@ const sites = [
     src: 'https://s0.wklcdn.com/image_268/8043024/161624249/101248608.400x300.jpg',
   },
   {
-    name: 'Salto del Buey',
-    description: 'Una impresionante cascada de más de 80 metros de altura. Un paraíso natural para los amantes del ecoturismo y la aventura. (Ubicado en La Ceja/Abejorral)',
-    hint: 'waterfall nature',
-    src: 'https://placehold.co/400x300.png',
-  },
-  {
     name: 'Puente Colgante de Colores',
     description: 'Una estructura vibrante y moderna que se ha convertido en un nuevo símbolo del municipio, ideal para fotos y paseos sobre el río.',
     hint: 'colorful suspension bridge',
@@ -24,12 +18,6 @@ const sites = [
     name: 'Parque Principal',
     description: 'El corazón del pueblo, un lugar de encuentro rodeado de arquitectura tradicional, donde se vive el ritmo tranquilo de La Pintada.',
     hint: 'colombian town square',
-    src: 'https://placehold.co/400x300.png',
-  },
-  {
-    name: 'Cañón del Río Cauca',
-    description: 'Un imponente cañón que ofrece vistas panorámicas y paisajes áridos de gran belleza, ideales para la fotografía y la contemplación.',
-    hint: 'cauca river canyon',
     src: 'https://placehold.co/400x300.png',
   },
   {
