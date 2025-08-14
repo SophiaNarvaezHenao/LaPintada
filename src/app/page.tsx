@@ -14,8 +14,8 @@ export default function Home() {
         <Hero />
         <About />
         <Cuisine />
-        <FolkTaleGenerator />
         <Events />
+        <FolkTaleGenerator />
       </main>
       <Footer />
     </>

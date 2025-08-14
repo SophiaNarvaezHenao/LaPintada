@@ -5,8 +5,8 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 const navLinks = [
   { href: '#about', label: 'El Pueblo' },
   { href: '#cuisine', label: 'Sabores' },
-  { href: '#folktale', label: 'Cuentos' },
   { href: '#events', label: 'Fiestas' },
+  { href: '#folktale', label: 'Cuentos' },
 ];
 
 export default function Header() {
