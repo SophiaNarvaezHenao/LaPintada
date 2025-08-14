@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
 
 const heroImage = { 
-  src: 'https://images.unsplash.com/photo-1611148261486-4e315d904232?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjb2xvbWJpYW4lMjBsYW5kc2NhcGV8ZW58MHx8fHwxNzU1MTAyODQ5fDA&ixlib=rb-4.1.0&q=80&w=1080', 
+  src: 'https://www.ecured.cu/images/thumb/3/38/Vista_aerea_de_La_Pintada_Antioquia.jpg/1200px-Vista_aerea_de_La_Pintada_Antioquia.jpg', 
   alt: 'Paisaje de La Pintada', 
   hint: 'colombian landscape' 
 };
