@@ -6,7 +6,7 @@ const sites = [
     name: 'Río Cauca',
     description: 'El alma de La Pintada. Sus aguas bañan el municipio, creando paisajes espectaculares y ofreciendo espacios para la recreación y la pesca.',
     hint: 'cauca river colombia',
-    src: 'https://placehold.co/400x300.png',
+    src: 'https://s0.wklcdn.com/image_268/8043024/161624249/101248608.400x300.jpg',
   },
   {
     name: 'Salto del Buey',
