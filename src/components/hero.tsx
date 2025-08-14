@@ -20,8 +20,8 @@ const heroImages = [
 
 export default function Hero() {
   const plugin = React.useRef(
-    Autoplay({ delay: 3000, stopOnInteraction: true })
-  )
+    Autoplay({ delay: 4000, stopOnInteraction: false })
+  );
 
   return (
     <section className="relative h-[90vh] w-full overflow-hidden">
@@ -31,8 +31,6 @@ export default function Hero() {
           loop: true,
         }}
         className="w-full h-full"
-        onMouseEnter={plugin.current.stop}
-        onMouseLeave={plugin.current.reset}
       >
         <CarouselContent className="-ml-0 h-full">
           {heroImages.map((image, index) => (
