@@ -20,12 +20,6 @@ const sites = [
     hint: 'colombian town square',
     src: 'https://placehold.co/400x300.png',
   },
-  {
-    name: 'El Mirador',
-    description: 'Un punto elevado que ofrece una vista privilegiada del pueblo y el majestuoso cañón del río Cauca. Perfecto para ver el atardecer.',
-    hint: 'lookout point landscape',
-    src: 'https://placehold.co/400x300.png',
-  },
 ];
 
 export default function UnforgettableSites() {
