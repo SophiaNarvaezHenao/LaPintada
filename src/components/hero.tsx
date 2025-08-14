@@ -10,7 +10,7 @@ import {
 } from '@/components/ui/carousel';
 import { ArrowDown } from 'lucide-react';
 import Autoplay from "embla-carousel-autoplay";
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const heroImages = [
   { src: 'https://images.unsplash.com/photo-1611148261486-4e315d904232?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjb2xvbWJpYW4lMjBsYW5kc2NhcGV8ZW58MHx8fHwxNzU1MTAyODQ5fDA&ixlib=rb-4.1.0&q=80&w=1080', alt: 'Paisaje de La Pintada', hint: 'colombian landscape' },
@@ -20,7 +20,7 @@ const heroImages = [
 
 export default function Hero() {
   const plugin = React.useRef(
-    Autoplay({ delay: 4000, stopOnInteraction: false })
+    Autoplay({ delay: 4000, stopOnInteraction: true })
   );
 
   return (
@@ -31,6 +31,8 @@ export default function Hero() {
           loop: true,
         }}
         className="w-full h-full"
+        onMouseEnter={plugin.current.stop}
+        onMouseLeave={plugin.current.reset}
       >
         <CarouselContent className="-ml-0 h-full">
           {heroImages.map((image, index) => (
