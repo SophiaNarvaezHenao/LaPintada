@@ -31,6 +31,8 @@ export default function Hero() {
           loop: true,
         }}
         className="w-full h-full"
+        onMouseEnter={plugin.current.stop}
+        onMouseLeave={plugin.current.reset}
       >
         <CarouselContent className="-ml-0 h-full">
           {heroImages.map((image, index) => (
