@@ -9,11 +9,11 @@ import {
 } from '@/components/ui/carousel';
 
 const photos = [
-  { src: 'https://images.unsplash.com/photo-1599901594957-6590a2a445d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxvJTIwY29sb21iaWFuJTIwc3RyZWV0fGVufDB8fHx8MTc1NTExODMxMHww&ixlib=rb-4.1.0&q=80&w=1080', alt: 'Calle antigua de La Pintada', hint: 'old colombian street' },
-  { src: 'https://images.unsplash.com/photo-1593132598099-35a143a41b2f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBoYXJ2ZXN0JTIwY29sb21iaWF8ZW58MHx8fHwxNzU1MTE4MzEwfDA&ixlib=rb-4.1.0&q=80&w=1080', alt: 'Campesinos en cosecha de café', hint: 'coffee harvest colombia' },
-  { src: 'https://images.unsplash.com/photo-1605312389146-81f7274b7c6c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmYW1pbHklMjByaXZlciUyMHZpbnRhZ2V8ZW58MHx8fHwxNzU1MTE4MzExfDA&ixlib=rb-4.1.0&q=80&w=1080', alt: 'Familia en el río Cauca', hint: 'family river vintage' },
-  { src: 'https://images.unsplash.com/photo-1632483187265-53896c6e26ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0b3duJTIwZmVzdGl2YWwlMjBjb2xvbWJpYXxlbnwwfHx8fDE3NTUxMTgzMTF8MA&ixlib=rb-4.1.0&q=80&w=1080', alt: 'Fiestas del pueblo', hint: 'town festival colombia' },
-  { src: 'https://images.unsplash.com/photo-1588616952876-6b0d1a494793?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb2xvbmlhbCUyMGFyY2hpdGVjdHVyZSUyMGNvbG9tYmlhfGVufDB8fHx8MTc1NTExODMxMnww&ixlib=rb-4.1.0&q=80&w=1080', alt: 'Arquitectura colonial', hint: 'colonial architecture colombia' },
+  { src: 'https://puebliandoporantioquia.com.co/wp-content/uploads/2025/03/PUENTE-COLGANTE-LA-PINTADA-B-1-1.jpg', alt: 'Puente Viejo sobre el río Cauca', hint: 'old bridge river' },
+  { src: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2Fpuente-sobre-el-rio-cauca-la-pintada-antioquia--568843349016149479%2F&psig=AOvVaw2y4XqS2iGzY6J_mB-Z5g-A&ust=1726002012015000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCJD69f78o4cDFQAAAAAdAAAAABAE', alt: 'Antiguo Ferrocarril de Antioquia en La Pintada', hint: 'old train colombia' },
+  { src: 'https://puebliandoporantioquia.com.co/wp-content/uploads/2025/03/IGLESIA-LA-PINTADA-B-1-1.jpg', alt: 'Iglesia San Antonio de La Pintada', hint: 'church colombia' },
+  { src: 'https://i.ytimg.com/vi/bYm2sJ95E-4/maxresdefault.jpg', alt: 'Fiestas del Turismo y la Ganadería', hint: 'town festival parade' },
+  { src: 'https://corregimientos.antioquia.gov.co/wp-content/uploads/2023/08/WhatsApp-Image-2023-08-11-at-2.32.22-PM.jpeg', alt: 'Habitantes de La Pintada', hint: 'colombian people' },
 ];
 
 export default function Gallery() {
