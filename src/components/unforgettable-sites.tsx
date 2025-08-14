@@ -15,9 +15,9 @@ const sites = [
     src: 'https://placehold.co/400x300.png',
   },
   {
-    name: 'Puente de Occidente',
-    description: 'Monumento Nacional y una joya de la ingeniería del siglo XIX. Conecta los municipios de Olaya y Santa Fe de Antioquia.',
-    hint: 'suspension bridge colombia',
+    name: 'Puente Colgante de Colores',
+    description: 'Una estructura vibrante y moderna que se ha convertido en un nuevo símbolo del municipio, ideal para fotos y paseos sobre el río.',
+    hint: 'colorful suspension bridge',
     src: 'https://placehold.co/400x300.png',
   },
   {
