@@ -5,9 +5,6 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 const navLinks = [
   { href: '#about', label: 'El Pueblo' },
   { href: '#cuisine', label: 'Sabores' },
-  { href: '#gallery', label: 'Galería' },
-  { href: '#map', label: 'Explora' },
-  { href: '#figures', label: 'Personajes' },
   { href: '#folktale', label: 'Cuentos' },
   { href: '#events', label: 'Fiestas' },
 ];
