@@ -12,7 +12,7 @@ const sites = [
     name: 'Puente Colgante de Colores',
     description: 'Una estructura vibrante y moderna que se ha convertido en un nuevo símbolo del municipio, ideal para fotos y paseos sobre el río.',
     hint: 'colorful suspension bridge',
-    src: 'https://placehold.co/400x300.png',
+    src: 'https://s1.wklcdn.com/image_182/5483775/83739255/54109819.400x300.jpg',
   },
   {
     name: 'Parque Principal',
