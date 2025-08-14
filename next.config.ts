@@ -30,19 +30,13 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'www.laylita.com',
+        hostname: 'puebliandoporantioquia.com.co',
         port: '',
         pathname: '/**',
       },
       {
         protocol: 'https',
         hostname: 'i.ytimg.com',
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'puebliandoporantioquia.com.co',
         port: '',
         pathname: '/**',
       },
@@ -66,7 +60,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'www.ecured.cu',
+        hostname: 'www.laylita.com',
         port: '',
         pathname: '/**',
       },
