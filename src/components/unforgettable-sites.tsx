@@ -6,37 +6,37 @@ const sites = [
     name: 'Río Cauca',
     description: 'El alma de La Pintada. Sus aguas bañan el municipio, creando paisajes espectaculares y ofreciendo espacios para la recreación y la pesca.',
     hint: 'cauca river colombia',
-    src: 'https://upload.wikimedia.org/wikipedia/commons/4/41/Puente_ferreo_sobre_el_rio_cauca.jpg',
+    src: 'https://placehold.co/400x300.png',
   },
   {
     name: 'Salto del Buey',
     description: 'Una impresionante cascada de más de 80 metros de altura. Un paraíso natural para los amantes del ecoturismo y la aventura. (Ubicado en La Ceja/Abejorral)',
     hint: 'waterfall nature',
-    src: 'https://upload.wikimedia.org/wikipedia/commons/e/e0/Salto_del_buey.jpg',
+    src: 'https://placehold.co/400x300.png',
   },
   {
     name: 'Puente de Occidente',
     description: 'Monumento Nacional y una joya de la ingeniería del siglo XIX. Conecta los municipios de Olaya y Santa Fe de Antioquia.',
     hint: 'suspension bridge colombia',
-    src: 'https://upload.wikimedia.org/wikipedia/commons/0/07/Puente_de_Occidente%2C_Antioquia.jpg',
+    src: 'https://placehold.co/400x300.png',
   },
   {
     name: 'Parque Principal',
     description: 'El corazón del pueblo, un lugar de encuentro rodeado de arquitectura tradicional, donde se vive el ritmo tranquilo de La Pintada.',
     hint: 'colombian town square',
-    src: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/La_pintada_parque.jpg',
+    src: 'https://placehold.co/400x300.png',
   },
   {
     name: 'Cañón del Río Cauca',
     description: 'Un imponente cañón que ofrece vistas panorámicas y paisajes áridos de gran belleza, ideales para la fotografía y la contemplación.',
     hint: 'cauca river canyon',
-    src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Ca%C3%B1on_del_r%C3%ADo_cauca.jpg/1280px-Ca%C3%B1on_del_r%C3%ADo_cauca.jpg',
+    src: 'https://placehold.co/400x300.png',
   },
   {
     name: 'El Mirador',
     description: 'Un punto elevado que ofrece una vista privilegiada del pueblo y el majestuoso cañón del río Cauca. Perfecto para ver el atardecer.',
     hint: 'lookout point landscape',
-    src: 'https://puebliandoporantioquia.com.co/wp-content/uploads/2025/03/PANORAMICA-LA-PINTADA-B-2-1.jpg',
+    src: 'https://placehold.co/400x300.png',
   },
 ];
 
