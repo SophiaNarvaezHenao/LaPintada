@@ -18,7 +18,7 @@ const sites = [
     name: 'Parque Principal',
     description: 'El corazón del pueblo, un lugar de encuentro rodeado de arquitectura tradicional, donde se vive el ritmo tranquilo de La Pintada.',
     hint: 'colombian town square',
-    src: 'https://placehold.co/400x300.png',
+    src: 'https://www.viajarenverano.com/wp-content/uploads/2019/12/La-Pintada-Frontis.jpg',
   },
 ];
 
