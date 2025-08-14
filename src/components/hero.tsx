@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
 
 const heroImage = { 
-  src: 'https://www.ecured.cu/images/thumb/3/38/Vista_aerea_de_La_Pintada_Antioquia.jpg/1200px-Vista_aerea_de_La_Pintada_Antioquia.jpg', 
+  src: 'https://puebliandoporantioquia.com.co/wp-content/uploads/2025/03/PANORAMICA-LA-PINTADA-B-2-1.jpg', 
   alt: 'Paisaje de La Pintada', 
   hint: 'colombian landscape' 
 };
