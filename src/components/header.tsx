@@ -6,6 +6,7 @@ const navLinks = [
   { href: '#about', label: 'El Pueblo' },
   { href: '#cuisine', label: 'Sabores' },
   { href: '#events', label: 'Fiestas' },
+  { href: '#sites', label: 'Sitios' },
   { href: '#folktale', label: 'Cuentos' },
 ];
 

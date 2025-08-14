@@ -4,6 +4,7 @@ import About from '@/components/about';
 import FolkTaleGenerator from '@/components/folk-tale-generator';
 import Cuisine from '@/components/cuisine';
 import Events from '@/components/events';
+import UnforgettableSites from '@/components/unforgettable-sites';
 import Footer from '@/components/footer';
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
         <About />
         <Cuisine />
         <Events />
+        <UnforgettableSites />
         <FolkTaleGenerator />
       </main>
       <Footer />
