@@ -20,9 +20,11 @@ export default function Hero() {
         data-ai-hint={heroImage.hint}
         priority
       />
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white z-20 p-4 container">
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-20 p-4 container">
         <h1 className="font-headline text-5xl md:text-7xl font-bold tracking-tight drop-shadow-lg">
-          Bienvenidos a La Pintada
+          <span className="text-yellow-400">Bienvenidos</span>
+          <span className="text-blue-500"> a </span>
+          <span className="text-red-600">La Pintada</span>
         </h1>
         <p className="mt-4 max-w-2xl text-lg md:text-xl text-white/90 drop-shadow-md">
           Un viaje al corazón de la cultura paisa, donde cada rincón cuenta una historia y el aroma a café se mezcla con la brisa de las montañas.
