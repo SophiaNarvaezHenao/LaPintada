@@ -1,57 +1,25 @@
 'use client';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '@/components/ui/carousel';
 import { ArrowDown } from 'lucide-react';
-import Autoplay from "embla-carousel-autoplay";
-import React, { useEffect, useState } from 'react';
 
-const heroImages = [
-  { src: 'https://images.unsplash.com/photo-1611148261486-4e315d904232?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjb2xvbWJpYW4lMjBsYW5kc2NhcGV8ZW58MHx8fHwxNzU1MTAyODQ5fDA&ixlib=rb-4.1.0&q=80&w=1080', alt: 'Paisaje de La Pintada', hint: 'colombian landscape' },
-  { src: 'https://images.unsplash.com/photo-1579993718929-891f593130f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cml2ZXIlMjB2aWV3JTIwY29sb21iaWF8ZW58MHx8fHwxNzU1MTAyODQ5fDA&ixlib=rb-4.1.0&q=80&w=1080', alt: 'Río Cauca en La Pintada', hint: 'river view colombia' },
-  { src: 'https://images.unsplash.com/photo-1495766886415-5914d39f4a4f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjb2xvbWJpYW4lMjBicmlkZ2V8ZW58MHx8fHwxNzU1MTAzNDM2fDA&ixlib=rb-4.1.0&q=80&w=1080', alt: 'Puente de La Pintada', hint: 'colombian bridge' },
-];
+const heroImage = { 
+  src: 'https://images.unsplash.com/photo-1611148261486-4e315d904232?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjb2xvbWJpYW4lMjBsYW5kc2NhcGV8ZW58MHx8fHwxNzU1MTAyODQ5fDA&ixlib=rb-4.1.0&q=80&w=1080', 
+  alt: 'Paisaje de La Pintada', 
+  hint: 'colombian landscape' 
+};
 
 export default function Hero() {
-  const plugin = React.useRef(
-    Autoplay({ delay: 4000, stopOnInteraction: true })
-  );
-
   return (
     <section className="relative h-[90vh] w-full overflow-hidden">
-      <Carousel
-        plugins={[plugin.current]}
-        opts={{
-          loop: true,
-        }}
-        className="w-full h-full"
-        onMouseEnter={plugin.current.stop}
-        onMouseLeave={plugin.current.reset}
-      >
-        <CarouselContent className="-ml-0 h-full">
-          {heroImages.map((image, index) => (
-            <CarouselItem key={index} className="pl-0 h-full relative">
-              <Image
-                src={image.src}
-                alt={image.alt}
-                fill
-                className="object-cover w-full h-full brightness-50"
-                data-ai-hint={image.hint}
-                priority={index === 0}
-              />
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselPrevious className="absolute left-4 z-10 text-white bg-black/30 hover:bg-black/50 border-none" />
-        <CarouselNext className="absolute right-4 z-10 text-white bg-black/30 hover:bg-black/50 border-none" />
-      </Carousel>
-
+      <Image
+        src={heroImage.src}
+        alt={heroImage.alt}
+        fill
+        className="object-cover w-full h-full brightness-50"
+        data-ai-hint={heroImage.hint}
+        priority
+      />
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white z-20 p-4 container">
         <h1 className="font-headline text-5xl md:text-7xl font-bold tracking-tight drop-shadow-lg">
           Bienvenidos a La Pintada
